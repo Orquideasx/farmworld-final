@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { useCallback } from 'react';
 
 const IDKitWidget = dynamic(
-  () => import('@worldcoin/idkit/react').then(mod => mod.IDKitWidget),
+  () => import { IDKitWidget } from '@worldcoin/idkit';).then(mod => mod.IDKitWidget),
   { ssr: false }
 );
 
